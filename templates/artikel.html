@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <!-- <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" /> -->
+  <!-- <link rel="stylesheet" href="../assets/css/styles.min.css" /> -->
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/images/logos/favicon.png') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/styles.min.css') }}" />
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: black;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+    th, td {
+        padding: 12px;
+    }
+    th {
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+            <a href="{{ url_for('index') }}" class="text-nowrap logo-img" style="
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 2em;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+          ">
+            VANGUARD
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('index') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">FEATURES</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('ui_buttons') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Job Search</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('artikel') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-typography"></i>
+                </span>
+                <span class="hide-menu">Artikel</span>
+              </a>
+            </li>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+<!--  Main wrapper -->
+<div class="body-wrapper">
+  <!--  Header Start -->
+  <header class="app-header">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <ul class="navbar-nav">
+        <li class="nav-item d-block d-xl-none">
+          <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+            <i class="ti ti-menu-2"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--  Header End -->
+  <div class="container-fluid">
+  <!--  Row 1 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title" style="font-weight: bold;">Strategi Menghadapi Persaingan Penerimaan Kerja</h2>
+          <center>
+            <img src="{{ url_for('static', filename='assets/images/logos/gambar4.png') }}" alt="1.1 Grafik tentang kemampuan dengan rata-rata gaji yang dibutuhkan di dunia karir saat ini." class="card-img" style="width: 50%; height: auto; margin-top: 25px; margin-bottom: 25px">
+          </center>
+          <p class="card-text">Dalam dunia kerja yang semakin kompetitif, persaingan untuk mendapatkan 
+            pekerjaan semakin ketat. Dari analisis kami, lowongan pekerjaan yang memiliki jumlah 
+            dilihat lebih banyak cenderung memiliki korelasi positif dengan jumlah lamaran yang 
+            diterima. Artinya, semakin banyak orang yang melihat suatu lowongan pekerjaan, semakin 
+            besar pula persaingan untuk mendapatkan posisi tersebut.</p>
+          <p class="card-text">Untuk para pencari kerja, terutama yang baru memulai karier, disarankan untuk 
+            mempertimbangkan melamar pada lowongan pekerjaan yang tidak terlalu populer. Dengan 
+            begitu, peluang untuk diterima akan lebih besar, dan kamu dapat meningkatkan 
+            keterampilan serta pengalamanmu seiring berjalannya waktu. Langkah ini tidak hanya 
+            meningkatkan kesempatan untuk mendapatkan pekerjaan, tetapi juga membantu 
+            membangun fondasi yang kuat untuk bersaing di posisi yang lebih baik di masa mendatang. </p>
+          <h5>Tips untuk Para Pencari Kerja: </h5>
+          <h6>1. Fokus pada Lowongan yang Kurang Populer: </h6>
+          <p>
+            Cobalah untuk melamar pekerjaan 
+            yang mungkin tidak banyak dilirik orang. Peluangmu untuk diterima akan lebih besar 
+            dibandingkan dengan lowongan yang sangat populer.
+          <p>
+          
+          <h6>2. Tingkatkan Keterampilan </h6>
+          <p>
+            Manfaatkan kesempatan di pekerjaan pertama untuk 
+            mengasah keterampilan dan mendapatkan pengalaman berharga. Keterampilan ini 
+            akan sangat berguna saat kamu melamar posisi yang lebih tinggi di kemudian hari.
+          <p>
+
+          <h6>3. Tetap Aktif dan Terus Belajar </h6>
+          <p>
+            Dunia kerja selalu berkembang, jadi penting untuk 
+            terus belajar dan mengembangkan diri. Mengikuti kursus, pelatihan, atau seminar 
+            dapat menambah nilai jualmu di mata perekrut.
+        </div>
+
+        <center>
+        <h5 style="font-weight: bold; margin-bottom: 25px;">"Jangan takut untuk memulai dari hal kecil. Dari sinilah perjalanan besar dimulai. <br>
+          Kesuksesan akan datang seiring dengan upaya dan kerja keras yang konsisten." - 
+          Lao Tzu.</h5>
+        </center>
+      </div>
+
+  <!--  Row 2 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title" style="font-weight: bold;">Kerap diremehkan, seberapa penting sih belajar teknologi untuk prospek karir kita?</h2>
+          <p class="card-text">Di era digital yang terus berkembang, teknologi telah menjadi pilar utama yang mendukung hampir setiap aspek kehidupan kita. Dari transformasi bisnis hingga peningkatan kualitas hidup individu, teknologi memainkan peran yang sangat vital. Dalam artikel ini, kita akan mengeksplorasi mengapa teknologi adalah bidang industri yang paling dibutuhkan saat ini, didukung oleh data faktual dan tren terkini</p>
+          <p class="card-text">Teknologi telah mengubah cara perusahaan beroperasi melalui transformasi digital yang masif. Menurut laporan dari International Data Corporation (IDC), pengeluaran global untuk transformasi digital diperkirakan akan mencapai $2,8 triliun pada tahun 2025, naik dari $1,3 triliun pada tahun 2020. Investasi besar-besaran ini mencerminkan pentingnya teknologi dalam meningkatkan efisiensi operasional, mengoptimalkan proses bisnis, dan menciptakan model bisnis baru yang lebih responsif terhadap kebutuhan pasar.</p>
+          <p class="card-text">Belajar teknologi membuka peluang karier yang lebih luas dan menjanjikan. Saat ini, banyak industri mencari tenaga kerja yang memiliki keterampilan teknologi. Profesi seperti pengembang perangkat lunak, analis data, insinyur jaringan, dan spesialis keamanan siber sangat diminati. Menurut data dari Bureau of Labor Statistics Amerika Serikat, pekerjaan di bidang teknologi informasi diproyeksikan akan tumbuh 11% dari 2019 hingga 2029, jauh lebih cepat dibandingkan rata-rata untuk semua pekerjaan. Ini menunjukkan bahwa memahami teknologi bukan hanya sekadar pilihan tetapi merupakan investasi masa depan yang sangat berharga.</p>
+          <p class="card-text">Selain itu, teknologi adalah pendorong utama inovasi dan kreativitas. Dengan pemahaman yang baik tentang teknologi, seseorang dapat menciptakan solusi inovatif untuk berbagai masalah. Misalnya, pengembangan aplikasi baru, perangkat lunak, atau perangkat keras yang memudahkan dan meningkatkan efisiensi hidup sehari-hari. Inovasi teknologi juga mendorong kreativitas, memungkinkan individu untuk mengekspresikan diri mereka dengan cara yang baru dan menarik, serta berkontribusi pada kemajuan masyarakat</p>
+          <center>
+            <img src="{{ url_for('static', filename='assets/images/logos/gambar1.png') }}" alt="1.1 Grafik tentang kemampuan dengan rata-rata gaji yang dibutuhkan di dunia karir saat ini." class="card-img" style="width: 50%; height: auto; margin-bottom: 25px;">
+          </center>
+          <p class="card-text">Berdasarkan gambar di atas menunjukkan distribusi keterampilan yang paling banyak dibutuhkan di pasar kerja saat ini. Dari data tersebut, keterampilan di bidang teknologi informasi (Information Technology) mendominasi dengan persentase sebesar 15,54%. Ini menunjukkan bahwa teknologi informasi adalah keterampilan yang paling banyak dicari oleh perusahaan. Selanjutnya, keterampilan di bidang penjualan (Sales) menempati urutan kedua dengan persentase 9,94%, diikuti oleh berbagai keterampilan lainnya. Secara keseluruhan, belajar teknologi di era modern ini bukan hanya penting, tetapi esensial. Keterampilan teknologi tidak hanya membuka peluang karier yang luas dan menjanjikan, tetapi juga memainkan peran penting dalam inovasi, produktivitas, dan solusi untuk tantangan global. Oleh karena itu, penting bagi individu untuk terus mengembangkan keterampilan teknologi mereka untuk tetap relevan dan berkontribusi secara efektif di dunia yang semakin digital ini</p>
+        </div>
+      </div>
+
+  <!--  Row 3 -->
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title" style="font-weight: bold;">5 Skill ini yang paling dibutuhkan oleh tiga perusahaan terbesar di dunia, nomor 3 bikin kaget! </h2>
+          <center>
+            <img src="{{ url_for('static', filename='assets/images/logos/gambar2.jpg') }}" alt="1.1 Grafik tentang kemampuan dengan rata-rata gaji yang dibutuhkan di dunia karir saat ini." class="card-img" style="width: 40%; height: auto;">
+          </center>
+          <p class="card-text">Di dunia kerja yang terus berkembang pesat, memiliki keterampilan yang tepat adalah kunci utama untuk meraih kesuksesan. Keterampilan yang relevan dan komprehensif tidak hanya membantu seseorang dalam menyelesaikan tugas-tugas sehari-hari, tetapi juga mempersiapkan mereka untuk menghadapi tantangan yang lebih besar di masa depan.Pertama, keterampilan yang kuat memberikan fondasi yang kokoh bagi para profesional. Dengan keterampilan ini, mereka bisa lebih efisien dan produktif dalam menjalankan tugas-tugas mereka. Ini karena keterampilan yang baik memungkinkan seseorang untuk menyelesaikan pekerjaan dengan cepat dan tepat, mengurangi risiko kesalahan, dan meningkatkan kualitas hasil akhir.</p>
+          <p class="card-text">Selain itu, keterampilan juga memainkan peran penting dalam meningkatkan peluang karier. Di pasar kerja yang kompetitif, memiliki keterampilan yang relevan bisa membuat seseorang lebih menonjol di antara kandidat lainnya. Perusahaan cenderung mencari individu yang tidak hanya memiliki pengetahuan, tetapi juga kemampuan untuk menerapkannya dalam situasi nyata. Hal ini membuka peluang untuk mendapatkan promosi dan tanggung jawab yang lebih besar. Keterampilan juga penting untuk adaptabilitas di tempat kerja. Dunia kerja sering kali berubah dengan cepat, dengan teknologi baru dan metode kerja yang terus berkembang. Keterampilan yang baik memungkinkan seseorang untuk beradaptasi dengan perubahan ini, menjaga mereka tetap relevan dan produktif meskipun dihadapkan pada situasi yang penuh tekanan.</p>
+          <p class="card-text">Lebih dari itu, keterampilan yang komprehensif membantu dalam kolaborasi dan komunikasi. Di banyak organisasi, proyek-proyek besar memerlukan kerja sama tim. Memiliki keterampilan yang tepat memungkinkan individu untuk berkomunikasi dengan jelas dan efektif, serta bekerja sama dengan baik dalam tim. Ini penting untuk memastikan bahwa proyek dapat diselesaikan dengan sukses dan semua anggota tim dapat bekerja bersama secara harmonis. Inovasi dan kreativitas juga sangat dipengaruhi oleh keterampilan yang dimiliki seseorang. Keterampilan yang baik memungkinkan seseorang untuk berpikir kritis dan kreatif, menghasilkan solusi baru dan inovatif untuk berbagai masalah yang dihadapi. Ini tidak hanya membantu dalam menyelesaikan tugas-tugas secara lebih efektif, tetapi juga berkontribusi pada kemajuan dan pertumbuhan organisasi.</p>
+          <h5>Keterampilan yang Diperlukan di Era Digital</h5>
+          <h6>1. Keterampilan Teknik (Engineering Skills)</h6>
+          <p>
+            * Merancang, membangun, dan memelihara sistem dan perangkat lunak.<br>
+            * Menguasai bahasa pemrograman seperti Python, Java, atau C++.<br>
+            * Memiliki pengetahuan tentang sistem operasi seperti Linux atau Windows.<br>
+            * Memahami konsep jaringan dan keamanan siber.<br>
+          </p>
+
+          <h6>2. Keterampilan Manajemen (Management Skills)</h6>
+          <p>
+            * Merencanakan, mengorganisir, memimpin, dan mengendalikan tim dan proyek.<br>
+            * Menetapkan tujuan dan sasaran yang realistis.<br>
+            * Mendelegasikan tugas secara efektif.<br>
+            * Memotivasi dan memberdayakan tim.<br>
+            * Mengevaluasi kinerja dan memberikan umpan balik.<br>
+          </p>
+
+          <h6>3. Keterampilan Penjualan (Sales Skills)</h6>
+          <p>
+            * Membangun hubungan dengan pelanggan.<br>
+            * Memahami kebutuhan pelanggan.<br>
+            * Meyakinkan pelanggan untuk membeli produk atau layanan.<br>
+            * Mempresentasikan produk atau layanan dengan jelas dan meyakinkan.<br>
+            * Negosiasi dan menutup kesepakatan.<br>
+          </p>
+
+          <h6>4. Keterampilan Lainnya (Other Skills)</h6>
+          <p>
+            * Komunikasi yang baik, baik tertulis maupun lisan.<br>
+            * Kemampuan memecahkan masalah.<br>
+            * Kreativitas dan inovasi.<br>
+            * Beradaptasi dengan cepat terhadap perubahan.<br>
+            * Bekerja sama dengan tim.<br>
+            * Etika kerja yang baik.<br>
+          </p>
+
+          <h6>5. Keterampilan IT (IT Skills)</h6>
+          <p>
+            * Menggunakan komputer, perangkat lunak, dan jaringan.<br>
+            * Mengoperasikan sistem operasi seperti Windows, macOS, atau Linux.<br>
+            * Menguasai aplikasi Microsoft Office seperti Word, Excel, dan PowerPoint.<br>
+            * Memiliki pengetahuan dasar tentang pemrograman dan jaringan.<br>
+            * Memahami konsep keamanan siber.<br>
+          </p>
+          <p class="card-text">Dalam dunia kerja yang terus berkembang, memiliki keterampilan yang tepat adalah kunci kesuksesan. Keterampilan yang relevan dan komprehensif tidak hanya membantu menyelesaikan tugas sehari-hari, tetapi juga mempersiapkan individu menghadapi tantangan masa depan. Berdasarkan data dari Google, Amazon, dan Tesla, keterampilan teknik, manajemen, penjualan, keterampilan lainnya, dan keterampilan IT adalah yang paling dibutuhkan. Kemampuan ini meningkatkan efisiensi, peluang karier, adaptabilitas, kolaborasi, komunikasi, inovasi, dan kreativitas, sehingga berkontribusi pada pertumbuhan dan kesuksesan organisasi.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+
+
+  <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/sidebarmenu.js"></script>
+  <script src="../assets/js/app.min.js"></script>
+
+
+  <script src="{{ url_for('static', filename='assets/libs/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/sidebarmenu.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/app.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/simplebar/dist/simplebar.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/dashboard.js') }}"></script>
+</body>
+
+</html>

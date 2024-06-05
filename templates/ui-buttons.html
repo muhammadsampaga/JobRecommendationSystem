@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modernize Free</title>
+  <!-- <link rel="shortcut icon" type="image/png" href="../assets/images/logos/favicon.png" /> -->
+  <!-- <link rel="stylesheet" href="../assets/css/styles.min.css" /> -->
+  <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='assets/images/logos/favicon.png') }}" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='assets/css/styles.min.css') }}" />
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+        color: black;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #ddd;
+    }
+    th, td {
+        padding: 12px;
+    }
+    th {
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+  <!--  Body Wrapper -->
+  <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
+    data-sidebar-position="fixed" data-header-position="fixed">
+    <!-- Sidebar Start -->
+    <aside class="left-sidebar">
+      <!-- Sidebar scroll-->
+      <div>
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+            <a href="{{ url_for('index') }}" class="text-nowrap logo-img" style="
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            font-size: 2em;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+          ">
+            VANGUARD
+          </a>
+          <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
+            <i class="ti ti-x fs-8"></i>
+          </div>
+        </div>
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('index') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">FEATURES</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('ui_buttons') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-article"></i>
+                </span>
+                <span class="hide-menu">Job Search</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="{{ url_for('artikel') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-typography"></i>
+                </span>
+                <span class="hide-menu">Artikel</span>
+              </a>
+            </li>
+        </nav>
+        <!-- End Sidebar navigation -->
+      </div>
+      <!-- End Sidebar scroll-->
+    </aside>
+    <!--  Sidebar End -->
+    <!--  Main wrapper -->
+    <div class="body-wrapper">
+           <!--  Header Start -->
+           <header class="app-header">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <ul class="navbar-nav">
+                <li class="nav-item d-block d-xl-none">
+                  <a class="nav-link sidebartoggler nav-icon-hover" id="headerCollapse" href="javascript:void(0)">
+                    <i class="ti ti-menu-2"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-icon-hover" href="javascript:void(0)">
+                    <i class="ti ti-bell-ringing"></i>
+                    <div class="notification bg-primary rounded-circle"></div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </header>
+          <!--  Header End -->
+      <div class="container-fluid">
+        <!--  Row 1 -->
+        <div class="row">
+          <div class="col-lg-8 d-flex align-items-strech">
+              <div class="card-body">
+                <div class="d-sm-flex d-block align-items-center justify-content-between mb-9">
+                </div>
+                <div>
+                  <form id="jobForm">
+                    <label for="jobText">Enter your job details:</label><br><br>
+                    <textarea id="jobText" name="jobText" rows="4" cols="50" 
+    style="
+        width: 100%;
+        max-width: 600px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        resize: vertical;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: border-color 0.3s, box-shadow 0.3s;
+    "
+    onfocus="this.style.borderColor='#4CAF50'; this.style.boxShadow='0 0 8px rgba(76, 175, 80, 0.6)';"
+    onblur="this.style.borderColor='#ccc'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)';"
+></textarea><br><br>
+                    <input type="button" value="Submit" class="btn btn-outline-primary m-1" onclick="getRecommendation()">
+                </form>
+                <h2>Predicted Details:</h2>
+                <div id="results"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="{{ url_for('static', filename='assets/libs/jquery/dist/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/sidebarmenu.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/app.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/apexcharts/dist/apexcharts.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/libs/simplebar/dist/simplebar.js') }}"></script>
+  <script src="{{ url_for('static', filename='assets/js/dashboard.js') }}"></script>
+</body>
+
+</html>
